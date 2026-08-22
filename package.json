@@ -1,0 +1,16 @@
+{
+  "name": "key-system",
+  "version": "1.0.0",
+  "description": "Roblox script key system with Cloudflare Workers",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute key-db --local --file=./schema.sql",
+    "db:migrate:remote": "wrangler d1 execute key-db --remote --file=./schema.sql"
+  },
+  "devDependencies": {
+    "wrangler": "^3.99.0"
+  }
+}

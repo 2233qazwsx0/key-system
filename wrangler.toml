@@ -1,0 +1,24 @@
+name = "key-system"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+account_id = "c57a3ec38f7af53910a6c08911e81a68"
+
+[vars]
+# 管理后台密钥，通过 Cloudflare Dashboard 设置
+ADMIN_KEY = ""
+
+# D1 数据库绑定
+[[d1_databases]]
+binding = "DB"
+database_name = "key-db"
+database_id = "e0126783-427a-4a0e-bb8d-fb5bffc3a807"
+
+# R2 存储桶绑定
+[[r2_buckets]]
+binding = "SCRIPT_BUCKET"
+bucket_name = "scripts"
+
+# 静态资源（管理后台）
+[assets]
+directory = "./admin"
+binding = "ASSETS"
