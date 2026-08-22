@@ -68,6 +68,9 @@ export default {
         if (path === '/api/admin/users' && request.method === 'GET') {
           return await handleAdminListUsers(env);
         }
+        if (path === '/api/admin/users' && request.method === 'POST') {
+          return await handleAdminCreateUser(request, env);
+        }
         if (path.startsWith('/api/admin/keys/') && request.method === 'DELETE') {
           const keyId = path.split('/').pop();
           return await handleAdminDeleteKey(keyId, env);
